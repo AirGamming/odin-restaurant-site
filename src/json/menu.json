@@ -1,0 +1,115 @@
+{
+    "menu": [
+        {"name-en": "dumplings",
+        "name-pl": "pierogi",
+        "price": 10,
+        "ingredients": ["potato", "onion", "meat", "dough"],
+        "type": "main"
+        },
+        {
+        "name-en": "pork chops with potatos",
+        "name-pl": "kotlety schabowe z ziemniakami",
+        "price": 15,
+        "ingredients": ["pork", "potato", "onion","salad"],
+        "type": "main"
+        },
+        {
+        "name-en": "chicken soup",
+        "name-pl": "rosół",
+        "price": 5,
+        "ingredients": ["chicken", "onion", "carrot", "celery"],
+        "type": "soup"
+        },
+        {
+            "name-en": "white sausage",
+            "name-pl": "biała kiełbasa",
+            "price": 5,
+            "ingredients": ["pork", "onion", "salt"],
+            "type": "starter"
+        },
+        {
+            "name-en": "beer",
+            "name-pl": "piwo",
+            "price": 5,
+            "ingredients": ["water", "barley", "hops"],
+            "type": "alcochol"
+        },
+        {
+            "name-en": "vodka",
+            "name-pl": "wódka",
+            "price": 10,
+            "ingredients": ["water", "grain"],
+            "type": "alcochol"
+        },
+        {
+            "name-pl": "golonka",
+            "name-en": "ham",
+            "price": 10,
+            "ingredients": ["pork", "salt"],
+            "type": "starter"
+        },
+        {
+            "name-pl": "kopytka",
+            "name-en": "potato dumplings",
+            "price": 10,
+            "ingredients": ["potato", "dough"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet schabowy",
+            "name-en": "pork chop",
+            "price": 10,
+            "ingredients": ["pork", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet mielony",
+            "name-en": "ground beef chop",
+            "price": 10,
+            "ingredients": ["beef", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet drobiowy",
+            "name-en": "chicken chop",
+            "price": 10,
+            "ingredients": ["chicken", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet z indyka",
+            "name-en": "turkey chop",
+            "price": 10,
+            "ingredients": ["turkey", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet z kurczaka",
+            "name-en": "chicken chop",
+            "price": 10,
+            "ingredients": ["chicken", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet z piersi kurczaka",
+            "name-en": "chicken breast chop",
+            "price": 10,
+            "ingredients": ["chicken breast", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet z piersi indyka",
+            "name-en": "turkey breast chop",
+            "price": 10,
+            "ingredients": ["turkey breast", "onion", "salt"],
+            "type": "main"
+        },
+        {
+            "name-pl": "kotlet z piersi z indyka",
+            "name-en": "turkey breast chop",
+            "price": 10,
+            "ingredients": ["turkey breast", "onion", "salt"],
+            "type": "main"
+        }
+    ]
+}

@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-}a{
+}body{
+    background: url(/img/pattern.webp);
+}
+a{
     text-decoration: none;
     color: #000;
-}
-#menu{
+}#navbar{
     display: flex;
     list-style-type: none;
     gap: 2rem;
@@ -17,4 +19,8 @@
     background: rgb(255, 255, 255);
     justify-content: space-around;
     align-items: center;
-} 
+} #menu{
+    background-color: white;
+    position: absolute;
+    top: 100px;
+}
