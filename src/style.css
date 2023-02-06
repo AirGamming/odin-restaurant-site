@@ -6,11 +6,15 @@
     font-family: 'Roboto', sans-serif;
 }body{
     background: url(/img/pattern.webp);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 a{
     text-decoration: none;
     color: #000;
 }#navbar{
+    width: 100%;
     display: flex;
     list-style-type: none;
     gap: 2rem;
@@ -19,8 +23,13 @@ a{
     background: rgb(255, 255, 255);
     justify-content: space-around;
     align-items: center;
-} #menu{
+} .menuItem{
     background-color: white;
-    position: absolute;
-    top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 5rem;
+    max-width: 100vh;
+    min-width: 600px;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: #000 1px solid;
 }

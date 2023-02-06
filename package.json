@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "JSON2": "^0.1.0"
+    "JSON2": "^0.1.0",
+    "Prettier": "npm:prettier@^2.8.3"
   }
 }
