@@ -4,54 +4,52 @@ let menu = {
     "items": [
         {
             "name": "Logo",
-            "url": "/",
+            "type": "p",
             "img": Logo.default
         },
         {
             "name": "Home",
-            "url": "/"
+            "type": "h3"
         },
         {
             "name": "About",
-            "url": "/about"
+            "type": "h3"
         },
         {
             "name": "Contact",
-            "url": "/contact"
+            "type": "h3"
         },
         {
             "name": "Menu",
-            "url": "/menu"
+            "type": "h3"
         },
         {
             "name": "",
-            "url": "/"
+            "type": "h3"
         }
     ],
-    Render(){
-        let list = document.createElement("ul");
-        list.setAttribute("id", "navbar");
-        document.body.appendChild(list);
-        menu.items.forEach(item => {
-            if(item.img){
-                let img = document.createElement("img");
-                img.setAttribute("src", item.img);
-                img.setAttribute("class", "navItem");
-                img.setAttribute("alt", item.name);
-                img.setAttribute("height", 64);
-                list.appendChild(img);
-            }else{
-                let li = document.createElement("li");
-                let a = document.createElement("a");
-                a.setAttribute("href", item.url);
-                a.innerHTML = item.name;
-                a.setAttribute("class", "navItem");
-                li.appendChild(a);
-                list.appendChild(li);
-            }
-        });
-    }
 };
 
+export default function navnar(){
+    let list = document.createElement("ul");
+    list.setAttribute("id", "navbar");
+    document.body.appendChild(list);
+    menu.items.forEach(item => {
+        if(item.img){
+            let img = document.createElement("img");
+            img.setAttribute("src", item.img);
+            img.setAttribute("class", "logo");
+            img.setAttribute("alt", item.name);
+            img.setAttribute("height", 64);
+            list.appendChild(img);
+        }else{
+            let li = document.createElement("li");
+            let a = document.createElement(item.type);
 
-export default menu.Render();
+            a.innerHTML = item.name;
+            a.setAttribute("class", `navItem ${item.name}`);
+            li.appendChild(a);
+            list.appendChild(li);
+        }
+    });
+}

@@ -1,8 +1,13 @@
 import "./style.css";
-import Render from "./pages/components/navbar.js";
-import * as Logo from "/img/logo.png";
+import navbar from "./pages/components/navbar.js";
+import * as Logo from "../img/logo.ico";
 import menuItems from "/src/pages/menu.js";
 
-document.favicon = Logo;
+
+
+navbar();
+
+document.querySelectorAll(".navitem");
+
+
 menuItems();
-Render();
