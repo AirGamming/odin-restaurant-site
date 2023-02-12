@@ -6,12 +6,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const app = require("express")
 
 const isProduction = process.env.NODE_ENV == "production";
-
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
   : "style-loader";
+  
 
 const config = {
+  
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -54,7 +55,7 @@ const config = {
 module.exports = () => {
   if (isProduction) {
     config.mode = "production";
-
+    experiments.topLevelAwait = true
     config.plugins.push(new MiniCssExtractPlugin());
   } else {
     config.mode = "development";
@@ -62,3 +63,8 @@ module.exports = () => {
   return config;
 };
 
+// module.exports = {
+//   experiments: {
+//     topLevelAwait: true,
+//   },
+// };

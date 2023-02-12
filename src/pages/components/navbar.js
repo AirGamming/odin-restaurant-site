@@ -9,31 +9,32 @@ let menu = {
         },
         {
             "name": "Home",
-            "type": "h3"
+            "type": "button"
         },
         {
             "name": "About",
-            "type": "h3"
+            "type": "button"
         },
         {
             "name": "Contact",
-            "type": "h3"
+            "type": "button"
         },
         {
             "name": "Menu",
-            "type": "h3"
+            "type": "button"
         },
         {
             "name": "",
-            "type": "h3"
+            "type": "div"
         }
     ],
 };
 
 export default function navnar(){
-    let list = document.createElement("ul");
-    list.setAttribute("id", "navbar");
-    document.body.appendChild(list);
+    let items = document.createElement("ul");
+    let list = []
+    items.setAttribute("id", "navbar");
+    document.body.appendChild(items);
     menu.items.forEach(item => {
         if(item.img){
             let img = document.createElement("img");
@@ -41,15 +42,17 @@ export default function navnar(){
             img.setAttribute("class", "logo");
             img.setAttribute("alt", item.name);
             img.setAttribute("height", 64);
-            list.appendChild(img);
+            items.appendChild(img);
+            list.push(img)
         }else{
             let li = document.createElement("li");
             let a = document.createElement(item.type);
-
             a.innerHTML = item.name;
             a.setAttribute("class", `navItem ${item.name}`);
             li.appendChild(a);
-            list.appendChild(li);
+            items.appendChild(li);
+            list.push(li)
         }
     });
+    return list
 }
