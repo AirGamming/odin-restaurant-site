@@ -11,6 +11,7 @@ menuItems.forEach(item =>{
 
 export default function menuRender(){
     let main = document.createElement("main")
+    main.setAttribute("id", "menu");
     // typeOfFood.forEach(item => {
     //     let sort =  document.createElement("div");
     //     sort.setAttribute("id", item);

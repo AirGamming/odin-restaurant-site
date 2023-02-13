@@ -40,7 +40,7 @@ const config = {
         use: [stylesHandler, "css-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|ico|jpeg)$/i,
         type: "asset",
       },
 
