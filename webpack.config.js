@@ -55,7 +55,6 @@ const config = {
 module.exports = () => {
   if (isProduction) {
     config.mode = "production";
-    experiments.topLevelAwait = true
     config.plugins.push(new MiniCssExtractPlugin());
   } else {
     config.mode = "development";
