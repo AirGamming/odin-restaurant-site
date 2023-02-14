@@ -1,15 +1,31 @@
-
+let components = [
+    {
+        name: "header",
+        content: "About us",
+        type: "h1"
+    },
+    {
+        name: "text",
+        content: "lorem st. 410<br> lorem ipsum <br> Norwegian Sea <br>zip-code 12345",
+        type: "p"
+    },
+    {
+        name: "map",
+        content: `<div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=66.51326044311188,-4.218750000000001+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>`,
+        type: "div"
+    }
+]
 
 export default function aboutItems() {
     let main = document.createElement("main");
-    let div = document.createElement("div");
-    div.setAttribute("class", "about");
-    let header = document.createElement("h1");
-    header.innerHTML = "About us";
-    let text = document.createElement("p");
-    text.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien ut euismod luctus, lorem nisl tincidunt nunc, quis porttitor mauris lacus in enim. Aliquam erat volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis ut aliquam ultrices, nulla nisl luctus massa, vitae lacinia ipsum tellus a nunc. Donec vel arcu quis est luctus volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis ut aliquam ultrices, nulla nisl luctus massa, vitae lacinia ipsum tellus a nunc. Donec vel arcu quis est luctus volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis ut aliquam ultrices, nulla nisl luctus massa, vitae lacinia ipsum tellus a nunc. Donec vel arcu quis est luctus volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis ut aliquam ultrices, nulla nisl luctus massa, vitae lacinia ipsum tellus a nunc. Donec vel arcu quis est luctus volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis ut aliquam ultrices, nulla nisl luctus massa, vitae lacinia ipsum tellus a nunc. Donec vel arcu quis est luctus volutpat. Nulla facilisi. Nulla facilisi. Donec vel arcu quis est luctus volutpat. Nullam euismod, turpis"
-    div.append(header, text);
-    main.appendChild(div);
+    main.setAttribute("id", "about");
+    components.forEach(component => {
+        let element = document.createElement(component.type);
+        element.innerHTML = component.content;
+        element.setAttribute("id", component.name);
+        main.appendChild(element);
+        
+    });
     document.body.appendChild(main);
 }
     
